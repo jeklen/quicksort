@@ -1,0 +1,35 @@
+A	3 7 9 2 5 6
+	p         r
+	
+	# si di是不能分开的，这个可以不用作为函数参数传入
+	# 已经确定了A的位置，p，r直接赋值给si di 
+	mov si, offset a
+	mov di, 98
+	call quicksort
+	
+	# 在接下来的函数调用里面，比较麻烦的就是函数调用的时候参数的传递
+	# 参数的传递可以用栈
+	# 注意call function的时候会把ip也给搞进去
+	# 调用函数的时候函数的
+	# 函数开头就可以push进来
+	# 函数结尾把参数pop出来
+	
+quicksort(主要在于参数的传递)
+	partition ==> q(在partition里面把bx设置为q)
+	push si
+	push bx
+	call quicksort
+	pop bx
+	pop si
+	
+	push bx
+	push di
+	call quicksort
+	
+	mov si, di
+	add si, 2
+	mov di, bx
+	
+	call quicksort
+	
+partition(在于实现partition主算法)
