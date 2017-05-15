@@ -53,6 +53,7 @@ partition proc near
 	; a, si, di
 	push ax
 	push si
+	push bx
 	
 	mov bx, si
 	mov cx, di
@@ -78,6 +79,7 @@ partition proc near
 	mov [si], ax	;now si is the place of the partition place
 	mov bx, si
 	
+	pop bx
 	pop si
 	pop ax
 	RET

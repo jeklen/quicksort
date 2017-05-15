@@ -28,6 +28,23 @@ def partition2(A, p, r):
     A[r], A[i] = A[i], A[r]
     return i
 
+def partition2(A, si, di):
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 A = [1, 9, 2, 3, -1, 10]
 quicksort(A, 0, 5)
 print(A)

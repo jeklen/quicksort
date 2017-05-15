@@ -33,3 +33,7 @@ quicksort(主要在于参数的传递)
 	call quicksort
 	
 partition(在于实现partition主算法)
+	# a, si, di
+	ax = [r]
+	bx = si - 2
+
